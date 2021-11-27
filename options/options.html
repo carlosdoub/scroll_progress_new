@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="options.css"/> 
+    <title>Scroll Progress New options</title>
+</head>
+<body>
+	<div id="title">Scroll Progress New Preferences <span id="version"></span></div>
+	<table id="options_window">
+		<tr>
+			<td>
+	<table>
+		<tr>
+			<td class="option_columns">
+
+	<fieldset class="options">
+		<legend>Position</legend>
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td><input type="radio" name="position" id="top_left" /></td>
+					<td class="position_label">Top Left</td>
+					<td class="position_label">Top Right</td>
+					<td><input type="radio" name="position" id="top_right" /></td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="position" id="bottom_left" /></td>
+					<td class="position_label">Bottom Left</td>
+					<td class="position_label">Bottom Right</td>
+					<td><input type="radio" name="position" id="bottom_right" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+	<fieldset class="options">
+		<legend>Offset</legend>
+
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td class="label_wide">Vertical</td>
+					<td> 
+						<input type="number" id="vertical_offset" class="number_input" required/> 
+					</td>
+					<td>px</td>
+				</tr>
+				<tr>
+					<td class="label_wide">Horizontal</td>
+					<td>
+						<input type="number" id="horizontal_offset" class="number_input" required/>
+					</td>
+					<td>px</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+	<fieldset class="options_one_row">
+		<legend>Transition Properties</legend>
+
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td class="label_wide">Duration</td>
+					<td> 
+						<input type="number" id="transition_duration" class="number_input" required/> 
+					</td>
+					<td>ms</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+
+</td>
+<td class="option_columns">
+
+	<fieldset class="options">
+		<legend>Text Size</legend>
+
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td class="label_wide">Font Size</td>
+					<td> 
+						<input type="number" id="font_size" class="number_input" required/> 
+					</td>
+					<td>px</td>
+				</tr>
+				<tr>
+					<td class="label_wide">Font Weight</td>
+					<td>
+						<input type="text" id="font_weight" class="number_input" required/>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+	<fieldset class="options">
+		<legend>Text Style</legend>
+
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td class="label_short">Opacity</td>
+					<td> 
+						<input type="number" min="0" max="1.0" step="0.1" id="opacity" class="number_input" required/> 
+						(0 - 1.0) <img src="img/b_help.png" title="Use your system decimal separator either '.' or ','. The opacity must have at maximum one decimal digit." />
+					</td>
+				</tr>
+				<tr>
+					<td class="label_short">Color</td>
+					<td>
+						<input type="color" id="color" class="large_input"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+	<fieldset class="options">
+		<legend>Text Border Style</legend>
+
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td class="label_short">Width</td>
+					<td> 
+						<input type="number" id="text_shadow_width" class="number_input" required/> 
+						px
+					</td>
+				</tr>
+				<tr>
+					<td class="label_short">Color</td>
+					<td>
+						<input type="color" id="text_shadow_color" class="large_input"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+
+</td>
+<td class="option_columns">
+
+	<fieldset class="options_one_row">
+		<legend>Disable in single images</legend>
+
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td class="label_wide">Disable</td>
+					<td> 
+						<input type="checkbox" id="disable_img" class="" /> 
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+	<td align="right">
+		<table id="buttons">
+			<tr>
+				<td id="message_td">
+					<span id="save_message"></span>
+				</td>
+				<td>
+					<input type="button" value="Save" id="save_options"/>
+				</td>
+				<td>
+					<input type="button" value="Restore defaults" id="restore_options"/>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<script src="options.js"></script>
+
+</body>
+</html>
+

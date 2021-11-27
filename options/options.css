@@ -1,0 +1,84 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+fieldset {
+	border: 1px solid lightgray;
+}
+
+.options {
+	width: 260px;
+	height: 70px;
+}
+
+.options_one_row {
+	width: 260px;
+	height: 45px;
+}
+
+#save_options {
+	width:55px;
+}
+
+#restore_options {
+	width:120px;
+}
+
+.number_input {
+	width: 55px;
+}
+
+table {
+	width: 100%;
+}
+
+#top_right, #top_left, #bottom_right, #bottom_left {
+	width: 10px;
+}
+
+.position_label {
+	width: 40%;
+}
+
+.label_wide {
+	width: 70%;
+}
+
+.label_short {
+	width: 40%;
+}
+
+td.option_columns {
+	vertical-align: top;
+}
+
+table#options_window {
+	background-color: rgb(240, 240, 240);
+	border:1px solid grey;
+	width: 50%;
+}
+
+#save_message {
+	float: right;
+}
+
+#message_td {
+	width: 100%;
+	padding: 6px;
+	vertical-align: middle;
+}
+
+#title {
+	padding: 6px; 
+	font-size: 16px; 
+	font-weight: bold;
+}
+
+input[type="button"] {
+	padding: 2px;
+}
+
+img {
+	vertical-align: middle;
+}
