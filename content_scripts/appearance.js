@@ -28,6 +28,12 @@ var appearance = {
             case 'textShadowColor':
             	this.setTextShadow();
             	break;
+			case 'zIndex':
+				this.indicator.style.zIndex = 9999999; // Hotfix
+                break;
+			case 'fontFamily':
+				this.indicator.style.fontFamily = "Arial, Helvetica, sans-serif"; // Hotfix
+                break;
             default:
                 break;
         }
@@ -80,15 +86,20 @@ var appearance = {
 		this.indicator.style[vertical] = this.prefs.verticalOffset + "px";
 		this.indicator.style[horizontal] = this.prefs.horizontalOffset + "px";
 
+		this.indicator.style.position = "fixed";
     },
 
-	loadPreferences: function() {
+	loadPreferences: function(options) {
+		this.prefs = options;
+
         let prefs = [ 'position',
                      'fontSize',
                      'fontWeight',
                      'textShadowWidth',
                      'color',
-                     'opacity'];
+                     'opacity',
+					'zIndex',
+					'fontFamily'];
                      // 'padding',
                      // 'backgroundColor',
                      // 'borderColor',
@@ -97,10 +108,9 @@ var appearance = {
                      // 'borderRadius',
                      // 'transitionDuration'];
 
-		let self = this;
-        prefs.forEach(function(pref) {
-            self.prefChanged(pref, self.prefs[pref]);
-        });
+        for(let pref of prefs) {
+            this.prefChanged(pref, options[pref]);
+        }
 
     },
 	
@@ -109,12 +119,8 @@ var appearance = {
 
 		this.indicator = indicator;
 		let {optionsSave} = await browser.storage.local.get("optionsSave");
-		this.prefs = optionsSave;
 
-		this.loadPreferences();
-		this.indicator.style.position = "fixed";
-		this.indicator.style.zIndex = 9999999;
-		this.indicator.style.fontFamily = "Arial, Helvetica, sans-serif";
+		this.loadPreferences(optionsSave);
 
 		return this.indicator;
 	}
