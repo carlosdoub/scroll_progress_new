@@ -124,13 +124,12 @@ function loadOptions() {
 			} else {
 				SCROLL_TIME = res.optionsSave.transition_duration;
 				addScrollProgress();
+
+                document.addEventListener("scroll", function (e) {scroll();});
 			}
 		}
 	});
 }
 
 loadOptions();
-
-document.addEventListener("scroll", function (e) {scroll();});
-
 
